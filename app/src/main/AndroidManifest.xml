@@ -11,29 +11,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pruebasssss">
+
+        <activity
+            android:name=".Vistas.MenuApp"
+            android:exported="true" >            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
         <activity
             android:name=".Vistas.TrapecioActivity"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/Theme.Pruebasssss" />
         <activity
             android:name=".Vistas.RomboActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Vistas.RectanguloActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Rectangulo"
-            android:exported="false"
-            android:theme="@style/Theme.Pruebasssss" />
+            android:exported="true" />
+        
+        
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

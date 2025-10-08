@@ -15,7 +15,7 @@ import com.example.pruebasssss.Presentador.TrapecioPresenter
 import com.example.pruebasssss.R
 import kotlin.math.sqrt
 
-class TrapecioActivity : AppCompatActivity() {
+class TrapecioActivity : AppCompatActivity(), ContratoTrapecio.Vista {
 
 
     //declaramos el textarea del resultado para poder manipularlo desde las funciones del contrato
