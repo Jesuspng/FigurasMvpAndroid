@@ -13,8 +13,9 @@
         android:theme="@style/Theme.Pruebasssss">
 
         <activity
-            android:name=".Vistas.MenuApp"
-            android:exported="true" >            <intent-filter>
+            android:name=".Vistas.MenuActivity"
+            android:exported="true" >
+            <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
@@ -23,19 +24,16 @@
 
         <activity
             android:name=".Vistas.TrapecioActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Pruebasssss" />
+            android:exported="true" />
         <activity
             android:name=".Vistas.RomboActivity"
             android:exported="true" />
         <activity
             android:name=".Vistas.RectanguloActivity"
             android:exported="true" />
-        
-        
         <activity
             android:name=".MainActivity"
-            android:exported="true"/>
+            android:exported="false"/>
 
     </application>
 

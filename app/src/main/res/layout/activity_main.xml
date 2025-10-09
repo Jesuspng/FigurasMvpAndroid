@@ -88,15 +88,16 @@
             android:textSize="20dp"
             android:layout_marginTop="35dp"/>
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Gracias por su atencion"
-            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="116dp"
+            android:layout_height="50dp"
+            android:layout_margin="13dp"
+            android:text="Volver" />
 
 
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

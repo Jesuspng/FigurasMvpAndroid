@@ -1,5 +1,6 @@
 package com.example.pruebasssss.Vistas
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -27,12 +28,12 @@ class RectanguloActivity : AppCompatActivity(), ContratoRectangulo.Vista {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             enableEdgeToEdge()
-            setContentView(R.layout.activity_main)
+            setContentView(R.layout.activity_rectangulo)
 
             //inicializamos elemento a utilizar
             val txtl1: EditText =findViewById<EditText>(R.id.edtL1)
             val txtl2: EditText =findViewById<EditText>(R.id.edtL2)
-
+            val btnVolver: Button =findViewById<Button>(R.id.btnVolver)
             val btnArea: Button =findViewById<Button>(R.id.btnArea)
             val btnPerimetro: Button =findViewById<Button>(R.id.btnPerimetro)
 
@@ -62,6 +63,11 @@ class RectanguloActivity : AppCompatActivity(), ContratoRectangulo.Vista {
 
                 presentador.area(l1,l2)
             }
+
+            btnVolver.setOnClickListener {
+                val intent = Intent(this, MenuActivity::class.java)
+                startActivity(intent)
+            }
         }
 
         override fun showArea(area: Float) {
@@ -71,5 +77,7 @@ class RectanguloActivity : AppCompatActivity(), ContratoRectangulo.Vista {
         override fun showPerimetro(perimetro: Float) {
             txvResultado.text="El perimetro es ${perimetro}"
         }
+
+
 
     }

@@ -1,5 +1,6 @@
-package com.example.triangulo4a.Vistas
+package com.example.pruebasssss.Vistas
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.pruebasssss.Contratos.ContratoTriangulo
+import com.example.pruebasssss.MainActivity
 import com.example.pruebasssss.Presentador.TrianguloPresenter
 import com.example.pruebasssss.R
 import kotlin.math.sqrt
@@ -35,6 +37,7 @@ class MainActivity : AppCompatActivity(), ContratoTriangulo.Vista {
         val txtl2: EditText =findViewById<EditText>(R.id.edtL2)
         val txtl3: EditText =findViewById<EditText>(R.id.edtL3)
         val btnArea: Button =findViewById<Button>(R.id.btnArea)
+        val btnVolver: Button =findViewById<Button>(R.id.btnVolver)
         val btnPerimetro: Button =findViewById<Button>(R.id.btnPerimetro)
         val btnTipo: Button =findViewById<Button>(R.id.btnTipo)
         txvResultado=findViewById<TextView>(R.id.txvRes)
@@ -69,6 +72,10 @@ class MainActivity : AppCompatActivity(), ContratoTriangulo.Vista {
             val l2=txtl2.text.toString().toFloat()
             val l3=txtl3.text.toString().toFloat()
             presentador.area(l1,l2,l3)
+        }
+        btnVolver.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
         }
     }
 

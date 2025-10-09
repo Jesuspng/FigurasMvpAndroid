@@ -1,5 +1,6 @@
 package com.example.pruebasssss.Vistas
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.pruebasssss.Contratos.ContratoTrapecio
+import com.example.pruebasssss.MainActivity
 
 import com.example.pruebasssss.Presentador.TrapecioPresenter
 
@@ -31,15 +33,16 @@ class TrapecioActivity : AppCompatActivity(), ContratoTrapecio.Vista {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_trapecio)
 
         //inicializamos elemento a utilizar
         val txtl1: EditText =findViewById<EditText>(R.id.edtL1)
         val txtl2: EditText =findViewById<EditText>(R.id.edtL2)
         val txtl3: EditText =findViewById<EditText>(R.id.edtL3)
         val btnArea: Button =findViewById<Button>(R.id.btnArea)
+        val btnVolver: Button =findViewById<Button>(R.id.btnVolver)
         val btnPerimetro: Button =findViewById<Button>(R.id.btnPerimetro)
-        val btnTipo: Button =findViewById<Button>(R.id.btnTipo)
+
         txvResultado=findViewById<TextView>(R.id.txvRes)
 
         //definimos el presentardor
@@ -67,6 +70,12 @@ class TrapecioActivity : AppCompatActivity(), ContratoTrapecio.Vista {
             val l3=txtl3.text.toString().toFloat()
             presentador.area(l1,l2,l3)
         }
+
+        btnVolver.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     override fun showArea(area: Float) {
@@ -76,5 +85,7 @@ class TrapecioActivity : AppCompatActivity(), ContratoTrapecio.Vista {
     override fun showPerimetro(perimetro: Float) {
         txvResultado.text="El perimetro es ${perimetro}"
     }
+
+
 
 }

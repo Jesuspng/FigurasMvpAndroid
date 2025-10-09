@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.pruebasssss.MainActivity
 import com.example.pruebasssss.R
 
-class MenuApp : AppCompatActivity() {
+class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
